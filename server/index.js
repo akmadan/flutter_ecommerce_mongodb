@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const userRoutes = require('./routes/user_routes')
+const productRoutes = require('./routes/product_routes')
 
 
 // define app
@@ -18,6 +19,7 @@ mongoose.connect('mongodb+srv://akshit:akshit12@cluster0.ljj6u0k.mongodb.net/?re
     
     }); 
     app.use('/api/user', userRoutes);
+    app.use('/api/product',productRoutes );
 })
 
 // server is listening
